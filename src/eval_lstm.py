@@ -1,7 +1,7 @@
 import torch
 from torch.nn.utils.rnn import pad_sequence
 
-def evaluate(model, loader, criterion, pad_token_id):
+def evaluate(model, loader, criterion, pad_token_id, device):
     model.eval()
     val_loss = 0.
     correct = 0
@@ -9,9 +9,9 @@ def evaluate(model, loader, criterion, pad_token_id):
 
     with torch.no_grad():
         for batch in loader:
-            x_batch = batch["input_ids"]
-            y_batch = batch["target_ids"]
-            lengths = batch["lengths"]
+            x_batch = batch["input_ids"].to(device)
+            y_batch = batch["target_ids"].to(device)
+            lengths = batch["lengths"].to(device)
 
             logits = model(x_batch, lengths)  # [B, T, V]
 
