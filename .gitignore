@@ -1,8 +1,2 @@
-/src/__pycache__/__init__.cpython-312.pyc
-/src/__pycache__/data_utils.cpython-312.pyc
-/src/__pycache__/eval_lstm.cpython-312.pyc
-/src/__pycache__/eval_transformer_pipeline.cpython-312.pyc
-/src/__pycache__/lstm_model.cpython-312.pyc
-/src/__pycache__/lstm_train.cpython-312.pyc
-/src/__pycache__/next_token_dataset.cpython-312.pyc
+/src/__pycache__/*
 /data/*

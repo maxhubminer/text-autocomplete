@@ -33,6 +33,8 @@ def clean_string(text):
 
 
 def save_dataset(texts, filename):
+
+    os.makedirs("data", exist_ok=True)
     
     csv_path = os.path.join("data", filename)
 
